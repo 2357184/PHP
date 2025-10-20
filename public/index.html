@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог - Вход или Регистрация</title>
+    <!-- Material Design CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/materialize.min.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container" id="app">
+        <!-- Навигационная панель -->
+        <nav class="navbar-top">
+            <div class="nav-wrapper">
+                <ul id="nav-menu" class="right" style="display: flex; gap: 15px; list-style: none; margin: 0; padding: 0;">
+                    <li id="nav-login-link" style="display: none;">
+                        <a href="index.html#login" onclick="showLoginPage()" style="font-size: 20px; padding: 10px 14px;">Вход</a>
+                    </li>
+                    <li id="nav-register-link" style="display: none;">
+                        <a href="index.html#register" onclick="showRegister()" style="font-size: 20px; padding: 10px 14px;">Регистрация</a>
+                    </li>
+                    <li id="nav-blog-link" style="display: none;">
+                        <a href="index.html#blog" onclick="showBlogPage()" style="font-size: 20px; padding: 10px 14px;">Блог</a>
+                    </li>
+                    <li id="nav-logout-link" style="display: none;">
+                        <a href="index.html" onclick="logout()" style="font-size: 20px; padding: 10px 14px;">Выход</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Страница входа -->
+        <div id="login-page" class="auth-container" style="display: none;">
+            <div class="row">
+                <div class="col s12 m6 offset-m3">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Вход в аккаунт</span>
+                            <form id="login-form">
+                                <div class="input-field">
+                                    <input id="login_username" type="text" class="validate" required>
+                                    <label for="login_username">Логин</label>
+                                </div>
+                                <div class="input-field">
+                                    <input id="login_password" type="password" class="validate" required>
+                                    <label for="login_password">Пароль</label>
+                                </div>
+                                <div id="login-error" class="error-message" style="display: none;"></div>
+                                <button class="btn waves-effect waves-light" type="submit">
+                                    Войти
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </form>
+                            <p class="center-align" style="margin-top: 20px;">
+                                Нет аккаунта? <a href="index.html#register" onclick="showRegister()">Зарегистрируйтесь</a>
+                            </p>
+                            <p class="center-align">
+                                <a href="index.html#recover" onclick="showRecover()">Забыли пароль?</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Страница регистрации -->
+        <div id="register-page" class="auth-container" style="display: none;">
+            <div class="row">
+                <div class="col s12 m6 offset-m3">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Регистрация</span>
+                            <form id="register-form">
+                                <div class="input-field">
+                                    <input id="register_username" type="text" class="validate" required>
+                                    <label for="register_username">Логин (минимум 3 символа)</label>
+                                </div>
+                                <div class="input-field">
+                                    <input id="register_password" type="password" class="validate" required>
+                                    <label for="register_password">Пароль (минимум 6 символов)</label>
+                                </div>
+                                <div id="register-error" class="error-message" style="display: none;"></div>
+                                <button class="btn waves-effect waves-light" type="submit">
+                                    Зарегистрироваться
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </form>
+                            <p class="center-align" style="margin-top: 20px;">
+                                Уже есть аккаунт? <a href="index.html#login" onclick="showLoginPage()">Вернуться на вход</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Страница восстановления пароля -->
+        <div id="recover-page" class="auth-container" style="display: none;">
+            <div class="row">
+                <div class="col s12 m6 offset-m3">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Восстановление пароля</span>
+                            <form id="recover-form">
+                                <div class="input-field">
+                                    <input id="recover_username" type="text" class="validate" required>
+                                    <label for="recover_username">Логин</label>
+                                </div>
+                                <div id="recover-error" class="error-message" style="display: none;"></div>
+                                <div id="recover-success" class="success-message" style="display: none;"></div>
+                                <button class="btn waves-effect waves-light" type="submit">
+                                    Восстановить пароль
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </form>
+                            <p class="center-align" style="margin-top: 20px;">
+                                <a href="index.html#login" onclick="showLoginPage()">Вернуться на вход</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Страница блога -->
+        <div id="blog-page" style="display: none;">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Записи блога</span>
+                            <div class="input-field">
+                                <label for="posts_per_page">Записей на странице:</label>
+                                <input id="posts_per_page" type="number" value="3" min="1" max="20">
+                                <button class="btn waves-effect waves-light" onclick="loadPosts(1)" style="margin-top: 10px;">
+                                    Применить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="posts-container"></div>
+
+            <!-- Пагинация -->
+            <div id="pagination-container" class="center-align" style="margin: 30px 0;"></div>
+        </div>
+    </div>
+
+    <!-- Material Design JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/materialize.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

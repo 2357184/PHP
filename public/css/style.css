@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 64px;
+}
+
+.navbar-top {
+    background-color: #1976d2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar-top .brand-logo {
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.navbar-top .nav-wrapper {
+    padding: 0 20px;
+}
+
+.navbar-top ul.right li {
+    padding: 0 15px;
+}
+
+.navbar-top a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-top a:hover {
+    opacity: 0.8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.auth-container {
+    margin-top: 40px;
+}
+
+.card {
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-content {
+    padding: 24px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.input-field {
+    margin-bottom: 20px;
+}
+
+.input-field label {
+    color: #999;
+    font-size: 14px;
+}
+
+.input-field input {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    font-size: 16px;
+    width: 100%;
+}
+
+.input-field input:focus {
+    border-bottom: 2px solid #1976d2;
+    outline: none;
+}
+
+.input-field input:focus + label {
+    color: #1976d2;
+}
+
+.btn {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    background-color: #1565c0;
+}
+
+.btn.waves-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.material-icons {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.material-icons.right {
+    margin-left: 8px;
+}
+
+.error-message {
+    color: #d32f2f;
+    background-color: #ffebee;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border-left: 4px solid #d32f2f;
+}
+
+.success-message {
+    color: #388e3c;
+    background-color: #e8f5e9;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border-left: 4px solid #388e3c;
+}
+
+.post-card {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.post-author {
+    font-weight: 500;
+    color: #1976d2;
+    font-size: 16px;
+}
+
+.post-date {
+    color: #999;
+    font-size: 12px;
+}
+
+.post-content {
+    color: #333;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pagination a,
+.pagination span {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #1976d2;
+    transition: all 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #1976d2;
+    color: white;
+}
+
+.pagination .active {
+    background-color: #1976d2;
+    color: white;
+    border-color: #1976d2;
+}
+
+.pagination .disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination .disabled:hover {
+    background-color: transparent;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 56px;
+    }
+
+    .navbar-top .brand-logo {
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .card-content {
+        padding: 16px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .col {
+        padding: 0 10px;
+    }
+}
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    user-select: none;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+.waves-effect.waves-light {
+    color: white;
+}
+
+.waves-effect .waves-ripple {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 100%;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    width: 100%;
+}
+
+.waves-effect.waves-light .waves-ripple {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
