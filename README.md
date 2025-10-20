@@ -69,8 +69,18 @@ blog-app/
    Откройте командную строку (CMD) и перейдите в папку XAMPP htdocs:
    ```bash
    cd C:\xampp\htdocs
+   ```bash
    git clone https://github.com/2357184/blog-app.git
+   ```bash
    cd blog-app
+   
+   Установка зависимостей:
+   ```bash
+   composer install
+   Инициализация базы данных: Убедитесь, что MySQL запущен (через XAMPP Control Panel).
+   ```bash
+   php config/init_db.php
+   
 5. **Доступ к приложению**
    Приложение будет доступно по адресу: `http://localhost:8000`
 
@@ -99,6 +109,7 @@ blog-app/
 <img width="1279" height="342" alt="image" src="https://github.com/user-attachments/assets/8ca01c27-2222-4d39-aa0b-7dd2d452db51" />
 4. Записи
 <img width="1198" height="725" alt="image" src="https://github.com/user-attachments/assets/d54d09ce-1431-4ac7-84b5-c8af613cd1cf" />
+
 
 
 
