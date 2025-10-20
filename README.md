@@ -55,40 +55,22 @@ blog-app/
 └── README.md             # Этот документ
 ```
 
-## Установка и запуск
+## Установка и запуск (Среда XAMPP)
 
 ### Требования
 
-- PHP 7.4 или выше (с расширениями `php-mysql`, `php-json`, `php-mbstring`)
-- MySQL 5.7 или выше
-- Composer
+- **XAMPP** (с запущенными модулями Apache и MySQL)
+- **Git**
+- **Composer** (установленный и добавленный в PATH)
 
 ### Пошаговая инструкция
 
-1. **Клонирование репозитория**
+1. **Клонирование репозитория:**
+   Откройте командную строку (CMD) и перейдите в папку XAMPP htdocs:
    ```bash
-   git clone <repository-url>
+   cd C:\xampp\htdocs
+   git clone https://github.com/2357184/blog-app.git
    cd blog-app
-   ```
-
-2. **Установка зависимостей Composer**
-   ```bash
-   composer install
-   ```
-
-3. **Инициализация базы данных**
-   Скрипт `init_db.php` создает базу данных `blog_db` с таблицами `users` и `posts`, а также заполняет их тестовыми данными.
-   ```bash
-   php config/init_db.php
-   ```
-
-4. **Запуск локального сервера**
-   Для запуска приложения можно использовать встроенный сервер PHP (для разработки):
-   ```bash
-   cd public
-   php -S localhost:8000
-   ```
-
 5. **Доступ к приложению**
    Приложение будет доступно по адресу: `http://localhost:8000`
 
@@ -117,6 +99,7 @@ blog-app/
 <img width="1279" height="342" alt="image" src="https://github.com/user-attachments/assets/8ca01c27-2222-4d39-aa0b-7dd2d452db51" />
 4. Записи
 <img width="1198" height="725" alt="image" src="https://github.com/user-attachments/assets/d54d09ce-1431-4ac7-84b5-c8af613cd1cf" />
+
 
 
 
