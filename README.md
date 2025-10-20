@@ -101,13 +101,14 @@ blog-app/
 
 ## Основные скрины
 - **Вход**
-<img width="1270" height="447" alt="image" src="https://github.com/user-attachments/assets/e77f607e-ba90-414b-aa17-c7b3d839cb1e" />
+<img width="1270" height="447" alt="image" src="https://github.com/user-attachments/assets/e77f607e-ba90-414b-aa17-c7b3d839cb1e" />.
 - **Регистрация**
-<img width="1271" height="403" alt="image" src="https://github.com/user-attachments/assets/6ab58d69-5507-4d07-b770-351f48acde19" />
+<img width="1271" height="403" alt="image" src="https://github.com/user-attachments/assets/6ab58d69-5507-4d07-b770-351f48acde19" />.
 - **Восстановление пароля**
-<img width="1279" height="342" alt="image" src="https://github.com/user-attachments/assets/8ca01c27-2222-4d39-aa0b-7dd2d452db51" />
+<img width="1279" height="342" alt="image" src="https://github.com/user-attachments/assets/8ca01c27-2222-4d39-aa0b-7dd2d452db51" />.
 - **Записи**
-<img width="1198" height="725" alt="image" src="https://github.com/user-attachments/assets/d54d09ce-1431-4ac7-84b5-c8af613cd1cf" />
+<img width="1198" height="725" alt="image" src="https://github.com/user-attachments/assets/d54d09ce-1431-4ac7-84b5-c8af613cd1cf" />.
+
 
 
 
